@@ -1,0 +1,40 @@
+<%- include('partials/head.ejs') %>
+
+<%- include('partials/nav.ejs') %>
+
+
+<div style="padding:80px ; " class="container">
+    <hr>
+ <div class="card">
+    <div class="card-header">
+     <h2>Edição de Usuario</h2>
+    </div>
+    <hr>
+    <div class="card-body">
+      <form method="post" action="/categories/update">
+         <label>Nome:</label>
+         <input class="form-control" type="text" name="nome" placeholder="Defina o titulo da categoria" value="<%= category.nome %>">
+         <br>
+
+         <label>Sobrenome:</label>
+         <input class="form-control" type="text" name="sobrenome" placeholder="Defina o titulo da categoria" value="<%= category.sobrenome %>">
+         <br>
+         <label>E-mail:</label>
+         <input class="form-control" type="text" name="email" placeholder="Defina o titulo da categoria" value="<%= category.email %>">
+         <br>
+         <label>Telefone:</label>
+         <input class="form-control" type="text" name="telefone" placeholder="Defina o titulo da categoria" value="<%= category.telefone %>">
+         <br>
+         
+         <input type="hidden" name="id" value=" <%= category.id %> ">
+
+
+         <button class="btn btn-success">Atualizar</button>
+       </form>
+    </div>
+ </div>
+</div>
+
+
+
+<%- include('partials/footer.ejs') %>
